@@ -11,10 +11,11 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     public function create(){
-        $name = 'arwani maulana';
-        $email = 'arwanimaulana89@gmail.com';
+        $name = 'nama anda';
+        $email = 'emailanda89@gmail.com';
         $password = Hash::make('password');
-        $role = 'admin';
+        $role = 'tukang';
+        // role hanya bisa diisi user atau admin
         DB::beginTransaction();
         try {
             $user = User::create([
